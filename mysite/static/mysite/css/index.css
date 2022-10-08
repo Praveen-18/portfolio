@@ -1,0 +1,137 @@
+div.col-md-8 {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+  padding-top: 25%;
+}
+.wrapper{
+  display: inline-flex;
+}
+.wrapper .static-text{
+  margin-left: 90px;
+  color: black;
+  font-size: 60px;
+  font-weight: 400;
+}
+.card-body .wrapper .static-text .btn{
+    margin: 50%;
+}
+.wrapper .dynamic-txts{
+  margin-left: 2px;
+  line-height: 90px;
+  height: 80px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  color: gold;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 6s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 10px;
+  background:black;
+  border-left: 2px solid gold;
+  animation: typing 1.5s steps(11) infinite;
+}
+@keyframes typing {
+  100%{
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+h1{
+  text-align: center;
+}
+button{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 0 35px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background: white;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+button:first-child:hover{
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #ffc720);
+  background-size: 400%;
+}
+button:first-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition : opacity 0.5s;
+}
+button:first-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+button:hover{
+  z-index: 1;
+  animation: glow 8s linear infinite;
+}
+.nav-link button:hover{
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #ffc720);
+    background-size: 400%;
+}
+.nav-link button:first-child:before{
+  content: '';
+  position: absolute;
+  background: inherit;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  border-radius: 50px;
+  filter: blur(20px);
+  opacity: 0;
+  transition : opacity 0.5s;
+}
+.nav-link button:first-child:hover:before{
+  opacity: 1;
+  z-index: -1;
+}
+.nav-link button:hover{
+  z-index: 1;
+    border-radius: 20%;
+  animation: glow 8s linear infinite;
+}
+
+@keyframes glow{
+  0%{
+    background-position: 0%;
+  }
+  100%{
+    background-position: 4000%;
+  }
+}
