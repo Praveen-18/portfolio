@@ -1,1 +1,1 @@
-web: gunicorn feebackform.wsgi
+web: gunicorn feedbackform.wsgi
